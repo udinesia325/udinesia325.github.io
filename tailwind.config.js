@@ -19,6 +19,9 @@ export default {
         'primary-700': '#632599',
         'primary-800': '#421866',
         'primary-900': '#210C33',
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
       }
     },
   },

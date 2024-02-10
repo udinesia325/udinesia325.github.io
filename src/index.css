@@ -18,4 +18,27 @@
       radial-gradient(30% 30% at 103% 74%, #9bf5743a 9%, #073aff00 100%),
       radial-gradient(30% 30% at 82% 10%, #ea55ea31 0%, #073aff00 100%);
   }
+
+  .portfolio-gradient {
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(
+        18% 28% at 18% 71%,
+        #ffffff59 6%,
+        #073aff00 100%
+      ),
+      radial-gradient(40% 40% at 2% 96%, rgba(248, 115, 255, 0.132) 0%, #073aff00 100%),
+      radial-gradient(30% 30% at 103% 100%, #9bf5743a 9%, #073aff00 100%);
+  }
+  .skill-gradient {
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(
+        18% 28% at 18% 71%,
+        #ffffff59 6%,
+        #073aff00 100%
+      ),
+      radial-gradient(50% 50% at 2% 0%, rgba(248, 115, 255, 0.132) 0%, #073aff00 100%),
+      radial-gradient(50% 50% at 103% 0%, #9bf5743a 9%, #073aff00 100%);
+  }
 }

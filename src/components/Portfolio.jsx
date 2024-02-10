@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 
 function Portfolio() {
   return (
-    <div className="pt-16">
+    <div className="pt-16 pb-10 portfolio-gradient">
       <h1 className="text-3xl font-semibold text-center">Portfolio</h1>
       <p className="text-xs font-light text-gray-500 mt-4 text-center">
         There are many variations of passages of Lorem Ipsum available, <br />{' '}
@@ -13,7 +13,7 @@ function Portfolio() {
 
       <div className="w-[90%] grid grid-cols-1 sm:grid-cols-3 gap-5 mx-auto mt-10">
         {portfolio.map((port, index) => (
-          <div className="border rounded-md overflow-hidden" key={index}>
+          <div className="border rounded-md overflow-hidden bg-white" key={index}>
             <img
               src={port.img}
               alt="demo website portfolio fahruddin"

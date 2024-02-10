@@ -18,6 +18,10 @@ const links = [
         href: '#'
     },
     {
+        title: 'Skills',
+        href: '#'
+    },
+    {
         title: 'Services',
         href: '#'
     },
