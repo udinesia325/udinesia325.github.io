@@ -5,7 +5,7 @@ import About from './About'
 
 function Hero() {
   return (
-        <div className="container max-w-5xl min-h-[650px] relative gradient-advance">
+        <div className="container max-w-5xl sm:min-h-[650px] relative gradient-advance">
             <div className='w-full'>
                 <div className="flex flex-col px-3 gap-y-4 justify-center items-stretch gap-x-4 sm:flex-row">
                     {/* Description */}
@@ -23,7 +23,7 @@ function Hero() {
                             ))}
                         </div>
                     </div>
-                    <div className='basis-1/2 flex items-center justify-center sm:items-end'>
+                    <div className='basis-1/2 hidden sm:flex items-center justify-center sm:items-end'>
                         <img src={dinn} alt="gambar fahruddin" className='w-full sm:w-[300px] rounded-md shadow-lg' />
                     </div>
                 </div>

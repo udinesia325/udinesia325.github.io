@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 
 function About() {
   return (
-    <div className="w-[90%] mx-auto sm:h-[350px] bg-white rounded-lg shadow-2xl p-10 mt-20 flex flex-col gap-y-4 sm:flex-row items-center translate-y-24 -bottom-20">
+    <div className="w-[90%] mx-auto sm:h-[350px] bg-white rounded-lg shadow-2xl p-10 mt-20 flex flex-col gap-y-8 sm:flex-row items-center translate-y-16 sm:translate-y-24 -bottom-20">
       <div className="basis-1/2 flex place-content-center relative">
         <img
           src={dinn}

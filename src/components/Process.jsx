@@ -29,7 +29,7 @@ function Process() {
         <div className="basis-1/2 flex gap-4">
           {result.map((proc, idx) => {
             return (
-              <div className={`flex flex-col gap-4 ${idx == 1 ? 'translate-y-4':''}`}>
+              <div key={idx} className={`flex flex-col gap-4 ${idx == 1 ? 'translate-y-4':''}`}>
                 {proc.map((data, index) => (
                   <div
                     key={index}
