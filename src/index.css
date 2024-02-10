@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
-    .btn-primary {
-        @apply bg-primary-500 text-white rounded-md py-2 px-3;
-    }
+  .btn-primary {
+    @apply bg-primary-500 text-white rounded-sm py-2 px-3 transition-all cursor-pointer hover:scale-105 hover:bg-primary-400;
+  }
+  .gradient-advance {
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(
+        18% 28% at 18% 71%,
+        #ffffff59 6%,
+        #073aff00 100%
+      ),
+      radial-gradient(40% 40% at 2% 96%, rgba(255, 201, 115, 0.272) 0%, #073aff00 100%),
+      radial-gradient(30% 30% at 103% 74%, #9bf5743a 9%, #073aff00 100%),
+      radial-gradient(30% 30% at 82% 10%, #ea55ea31 0%, #073aff00 100%);
+  }
 }
