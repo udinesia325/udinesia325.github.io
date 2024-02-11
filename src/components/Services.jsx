@@ -4,7 +4,7 @@ import services from '../data/services'
 
 function Services() {
   return (
-    <div className="py-10 bg-gray-100 flex place-items-center place-content-center">
+    <div id='services' className="py-10 bg-gray-100 flex place-items-center place-content-center">
       <div className="w-full sm:max-w-2xl flex flex-col sm:flex-row justify-center gap-10 p-2">
         <div className="basis-1/2 flex flex-col justify-center items-start">
           <h1 className="text-3xl font-semibold">What I do ?</h1>

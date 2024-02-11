@@ -5,23 +5,23 @@ const navbar = [
     },
     {
         title: 'About',
-        href: '#'
+        href: '#about'
     },
     {
         title: 'Process',
-        href: '#'
+        href: '#process'
     },
     {
         title: 'Portfolio',
-        href: '#'
+        href: '#portfolio'
     },
     {
         title: 'Skills',
-        href: '#'
+        href: '#skills'
     },
     {
         title: 'Services',
-        href: '#'
+        href: '#services'
     },
 ]
 

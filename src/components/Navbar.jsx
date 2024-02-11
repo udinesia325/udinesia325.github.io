@@ -37,13 +37,13 @@ function Navbar() {
             <a href={link.href}>{link.title}</a>
           </li>
         ))}
-        <li className="btn-primary ml-4">Contact</li>
+        <li className="btn-primary ml-4"><a href="#contact">Contact</a></li>
       </ul>
       <div onClick={toggleMenu} className={`transition-all cursor-pointer block sm:hidden ${openMenu ? '-rotate-180' : 'rotate-0'}`}>
         {openMenu ?  <Icon icon="mingcute:close-fill" className="text-gray-900 text-3xl" /> :  <Icon icon="gg:menu-right-alt" className="text-gray-900 text-3xl" />}
       </div>
 
-      <MobileMenu openMenu={openMenu} />
+      <MobileMenu openMenu={openMenu} toggleMenu={toggleMenu} />
     </div>
   )
 }

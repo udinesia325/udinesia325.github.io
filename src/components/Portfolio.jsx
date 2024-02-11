@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 
 function Portfolio() {
   return (
-    <div className="pt-16 pb-10 portfolio-gradient">
+    <div id='portfolio' className="pt-16 pb-10 portfolio-gradient">
       <h1 className="text-3xl font-semibold text-center">Portfolio</h1>
       <p className="text-xs font-light text-gray-500 mt-4 text-center">
         There are many variations of passages of Lorem Ipsum available, <br />{' '}

@@ -12,7 +12,7 @@ function Process() {
     return acc
   }, [])
   return (
-    <div className="h-[750px] bg-gray-100 flex place-items-center place-content-center">
+    <div id='process' className="h-[750px] bg-gray-100 flex place-items-center place-content-center">
       <div className="w-full sm:max-w-2xl flex flex-col sm:flex-row justify-center gap-3 p-2">
         <div className="basis-1/2 flex flex-col justify-center items-start">
           <h1 className="text-3xl font-semibold">Work Process</h1>

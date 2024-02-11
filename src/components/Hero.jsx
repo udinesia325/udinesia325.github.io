@@ -18,7 +18,7 @@ function Hero() {
                             {heroData.map((data,index) => (
                                 <div key={index} className="basis-1/3 flex flex-col items-center gap-y-2 py-2 px-3 bg-primary-100">
                                     <h1 className='text-lg font-semibold'>{ data.title} </h1>
-                                    <p className='text-sm text-gray-600 font-light'>{ data.subtitle }</p>
+                                    <p className='text-sm text-gray-900 font-light'>{ data.subtitle }</p>
                                 </div>
                             ))}
                         </div>
@@ -27,7 +27,7 @@ function Hero() {
                         <img src={dinn} alt="gambar fahruddin" className='w-full sm:w-[300px] rounded-md shadow-lg' />
                     </div>
                 </div>
-
+                <br id='about'></br>
                 {/* About */}
                 <About />
             </div>

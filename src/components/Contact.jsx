@@ -25,7 +25,7 @@ const contact = [
 function Contact() {
   return (
     <>
-      <div className="w-full min-h-[950px] sm:min-h-[640px] contact-gradient relative flex justify-center items-center">
+      <div id='contact' className="w-full min-h-[950px] sm:min-h-[640px] contact-gradient relative flex justify-center items-center">
         <div className="w-[95%] max-w-3xl bg-white px-5 pt-10 pb-8 rounded-md shadow-2xl absolute -bottom-10 flex  flex-col sm:flex-row justify-center items-start gap-3">
           <div className="basis-1/2">
             <h1 className="font-semibold text-lg">
