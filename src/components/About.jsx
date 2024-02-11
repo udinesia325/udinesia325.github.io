@@ -20,9 +20,9 @@ function About() {
       </div>
       <div className="basis-1/2 flex flex-col items-start">
         <h1 className='text-3xl font-semibold'>I am an Experienced <br /> Programmer</h1>
-        <p className='font-light text-gray-700 text-sm mt-5'>I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.</p>
-        <p className='font-light text-gray-700 text-sm'>I design and develop services for customers specializing creating stylish, modern websites, web services.</p>
-        <button className='btn-primary mt-4 text-sm font-semibold'>My Project</button>
+        <p className='font-light text-gray-700 text-sm mt-5'>With a blend of creativity and technical expertise, i strive to turn ideas into interactive and dynamic web experiences.</p>
+        <p className='font-light text-gray-700 text-sm'>From front-end aestethics to back-end functionality, my goal is to deliver seamless and enganging</p>
+        <a href='https://github.com/udinesia325?tab=repositories' target='_blank' className='btn-primary mt-4 text-sm font-semibold'>My Project</a>
       </div>
     </div>
   )

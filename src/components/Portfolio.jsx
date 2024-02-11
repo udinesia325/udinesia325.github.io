@@ -35,6 +35,7 @@ function Portfolio() {
               ) : (
                 <a
                   href={port.link}
+                  target='_blank'
                   className="inline-flex items-center gap-4 border border-primary-500 text-primary-500 py-1 px-4 text-sm font-semibold min-w-[80px] mt-2 transition-all hover:bg-primary-500 hover:text-white"
                 >
                   Visit

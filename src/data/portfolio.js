@@ -13,7 +13,7 @@ const portfolio = [
         title: 'Dream Agency',
         isPrivate: false,
         description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
-        link: '#',
+        link: 'https://dinn-dream-agency.vercel.app/',
     },
     {
         img: edutation_system,
@@ -37,7 +37,7 @@ const portfolio = [
         title: 'Nodewave',
         isPrivate: false,
         description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
-        link: '#',
+        link: 'https://nodewave-dinn.vercel.app/',
     },
     {
         img: komune_app,

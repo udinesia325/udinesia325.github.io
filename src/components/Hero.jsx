@@ -2,6 +2,7 @@ import React from 'react'
 import dinn from '../assets/dinn.jpg'
 import heroData from '../data/hero'
 import About from './About'
+import sendWhatsapp from '../utils/sendWhatsapp'
 
 function Hero() {
   return (
@@ -10,9 +11,9 @@ function Hero() {
                 <div className="flex flex-col px-3 gap-y-4 justify-center items-stretch gap-x-4 sm:flex-row">
                     {/* Description */}
                     <div className='flex flex-col gap-y-4 basis-1/2 items-start mt-10'>
-                        <h1 className='text-4xl text-gray-900 font-semibold'>Hello, I'm <br /> Fahruddin Salim</h1>
-                        <p>I'm a Freelance UI/UX Designer and Developer based in London, England. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.</p>
-                        <button className='btn-primary text-sm font-semibold'>Say Hello!</button>
+                        <h1 className='text-4xl text-gray-900 font-semibold'>Hello, I'm Ahmad<br /> Fahruddin Salim</h1>
+                        <p>Welcome to my portfolio, I'm a dedicated Fullstack Web Developer with a fervor for creating robust and user-friendly digital solution</p>
+                        <a href={sendWhatsapp('Halo fahruddin !')} target='_blank' className='btn-primary text-sm font-semibold'>Say Hello!</a>
 
                         <div className="w-full mt-10 flex gap-1 flex-col sm:flex-row">
                             {heroData.map((data,index) => (

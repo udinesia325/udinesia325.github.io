@@ -29,11 +29,11 @@ function Process() {
         <div className="basis-1/2 flex gap-4">
           {result.map((proc, idx) => {
             return (
-              <div key={idx} className={`flex flex-col gap-4 ${idx == 1 ? 'translate-y-4':''}`}>
+              <div key={idx} className={`basis-1/2 flex flex-col gap-4 ${idx == 1 ? 'translate-y-4':''}`}>
                 {proc.map((data, index) => (
                   <div
                     key={index}
-                    className="basis-1/2 flex flex-col items-start justify-start rounded-md shadow-sm p-3 group bg-white/80 transition-all hover:bg-white hover:scale-105"
+                    className="basis-1/2 aspect-square flex flex-col items-start justify-start rounded-md shadow-sm p-3 group bg-white/80 transition-all hover:bg-white hover:scale-105"
                   >
                     <Icon icon={data.icon} className='text-primary-500 bg-primary-100 rounded-md text-4xl p-1 group-hover:bg-primary-500 group-hover:text-white' />
                     <h1 className='text-sm font-semibold mt-2 mb-1'>
