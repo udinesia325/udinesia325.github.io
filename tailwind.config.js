@@ -19,9 +19,10 @@ export default {
         'primary-700': '#632599',
         'primary-800': '#421866',
         'primary-900': '#210C33',
+        'gray-900': '#2B384C',
       },
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
+        'spin-slow': 'spin 10s linear infinite',
       }
     },
   },

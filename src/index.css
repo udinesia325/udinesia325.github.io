@@ -41,4 +41,14 @@
       radial-gradient(50% 50% at 2% 0%, rgba(248, 115, 255, 0.132) 0%, #073aff00 100%),
       radial-gradient(50% 50% at 103% 0%, #9bf5743a 9%, #073aff00 100%);
   }
+  .contact-gradient {
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(
+        18% 28% at 18% 71%,
+        #ffffff59 6%,
+        #073aff00 100%
+      ),
+      radial-gradient(50% 50% at center, #eff57430 9%, #073aff00 100%);
+  }
 }
