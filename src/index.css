@@ -52,3 +52,8 @@
       radial-gradient(50% 50% at center, #eff57430 9%, #073aff00 100%);
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
