@@ -1,5 +1,5 @@
 import website_demo from "../assets/portfolio/website_demo.png"
-import edutation_system from "../assets/portfolio/education_system.png"
+import education_system from "../assets/portfolio/education_system.png"
 import kafaa_landing_page from "../assets/portfolio/kafaa_landing_page.png"
 import nodewave from "../assets/portfolio/nodewave.png"
 import komune_app from "../assets/portfolio/komune_app.png"
@@ -12,15 +12,15 @@ const portfolio = [
         category: 'Slicing UI',
         title: 'Dream Agency',
         isPrivate: false,
-        description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
+        description:'Turning visuals into code with precision and efficiency for a seamless web experience.',
         link: 'https://dinn-dream-agency.vercel.app/',
     },
     {
-        img: edutation_system,
+        img: education_system,
         category: 'Web Development',
         title: 'Education System',
         isPrivate: true,
-        description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
+        description:'Create and develop educational system features such as grade transripts, assessments, multi-role etc.',
         link: '#',
     },
     {
@@ -28,7 +28,15 @@ const portfolio = [
         category: 'Web Development',
         title: 'Landing Page',
         isPrivate: true,
-        description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
+        description:'Create a landing page that can be managed dynamically from the admin page',
+        link: '#',
+    },
+    {
+        img: komune_app,
+        category: 'Web Development',
+        title: 'Social Media Management System',
+        isPrivate: true,
+        description:'Broadcast whatsapp message, create approval post, tracking post with Social Media API',
         link: '#',
     },
     {
@@ -36,23 +44,15 @@ const portfolio = [
         category: 'Slicing UI',
         title: 'Nodewave',
         isPrivate: false,
-        description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
+        description:'Turning visuals into code with precision and efficiency for a seamless web experience.',
         link: 'https://nodewave-dinn.vercel.app/',
-    },
-    {
-        img: komune_app,
-        category: 'Web Development',
-        title: 'Education System',
-        isPrivate: true,
-        description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
-        link: '#',
     },
     {
         img: persmaunira,
         category: 'Web Development',
-        title: 'Landing Page',
+        title: 'Persma UNIRA News Webpage',
         isPrivate: false,
-        description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque.',
+        description:'Content management system to manage, create, edit, delete and post news with multi-role access. ',
         link: 'https://persmaunira.com',
     },
 ]

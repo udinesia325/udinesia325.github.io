@@ -1,6 +1,6 @@
 import React, { useId } from 'react'
 
-function Input({ type, name, placeholder, className }) {
+function Input({ type, name, placeholder, className, required = false }) {
   const id = useId()
   return (
     <div className={`relative z-0 ${className}`}>
@@ -10,6 +10,7 @@ function Input({ type, name, placeholder, className }) {
         className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-primary-300 appearance-none dark:border-gray-400 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-600 peer"
         placeholder=" "
         name={name}
+        required={required}
       />
       <label
         htmlFor={id}

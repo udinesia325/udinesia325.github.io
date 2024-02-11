@@ -6,9 +6,9 @@ function Portfolio() {
   return (
     <div id='portfolio' className="pt-16 pb-10 portfolio-gradient">
       <h1 className="text-3xl font-semibold text-center">Portfolio</h1>
-      <p className="text-xs font-light text-gray-500 mt-4 text-center">
-        There are many variations of passages of Lorem Ipsum available, <br />{' '}
-        but the majority have suffered alteration.
+      <p className="text-xs font-light text-gray-500 mt-4 text-center px-2 sm:px-0">
+        Check out my portfolio to see the cool stuff I've worked on! From making websites look good <br /> and easy to use to bringing
+        ideas to life, it's all here. Take a peek into my digital world <br /> where creativity meets functionality!
       </p>
 
       <div className="w-[90%] grid grid-cols-1 sm:grid-cols-3 gap-5 mx-auto mt-10">

@@ -14,7 +14,7 @@ function About() {
         />
         <div className='p-2 bg-white shadow-md rounded-md absolute z-[2] -bottom-4 flex gap-x-5 transition-all hover:scale-105'>
             { socialMedia.map((social, index) => (
-                <a key={index} href={social.link} target='_blank'><Icon icon={social.icon} className='text-3xl p-1 rounded-md text-purple-500 hover:text-white hover:bg-primary-500' /></a>
+                <a key={index} href={social.link} target='_blank' aria-label={social.link}><Icon icon={social.icon} className='text-3xl p-1 rounded-md text-purple-500 hover:text-white hover:bg-primary-500' /></a>
             ))}
         </div>
       </div>

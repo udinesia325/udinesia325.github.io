@@ -32,9 +32,8 @@ function Contact() {
               Let’s discuss your Project
             </h1>
             <p className="text-xs font-light text-gray-500 mt-3">
-              There are many variations of <br className="hidden sm:block" />{' '}
-              passages of Lorem Ipsu available. but the majority have suffered
-              alte.
+              Want to consult or discuss, even design a system <br className="hidden sm:block" />{' '}
+              with me? here is my address
             </p>
             <div className="flex flex-col gap-y-3 mt-10">
               {contact.map((con, index) => (
@@ -55,7 +54,7 @@ function Contact() {
 
               <div className="p-2 bg-white flex gap-x-3">
                 {socialMedia.map((social, index) => (
-                  <a key={index} href={social.link} target="_blank">
+                  <a key={index} href={social.link} target="_blank" aria-label={social.link}>
                     <Icon
                       icon={social.icon}
                       className="text-3xl p-1 rounded-md text-purple-500 hover:text-white hover:bg-primary-500"
@@ -67,9 +66,9 @@ function Contact() {
           </div>
           <div className="basis-1/2">
             <p className="text-xs font-light text-gray-500 mt-3">
-              There are many variations of passages of Lorem Ipsu available,{' '}
+              Fill out the form below to connect directly{' '}
               <br className="hidden sm:block" />
-              but the majority have suffered alte.
+              to me via email!
             </p>
             <form
               action="mailto:udinesia325@gmail.com"
@@ -77,13 +76,13 @@ function Contact() {
               encType="text/plain"
               className="mt-10 flex flex-col gap-4"
             >
-              <Input name="Name" placeholder="Name*" type="text" />
-              <Input name="Email" placeholder="Email*" type="email" />
-              <Input name="Location" placeholder="Location*" type="text" />
+              <Input name="Name" placeholder="Name*" type="text" required={true} />
+              <Input name="Email" placeholder="Email*" type="email" required={true} />
+              <Input name="Location" placeholder="Location" type="text" />
               <div className="flex gap-2">
                 <Input
                   name="Budget"
-                  placeholder="Budget*"
+                  placeholder="Budget"
                   type="text"
                   className="basis-1/2"
                 />
@@ -92,9 +91,10 @@ function Contact() {
                   placeholder="Subject*"
                   type="text"
                   className="basis-1/2"
+                  required={true}
                 />
               </div>
-              <Input name="Message" placeholder="Message*" type="text" />
+              <Input name="Message" placeholder="Message*" type="text" required={true} />
               <button className="btn-primary flex-none flex items-center gap-3 w-fit text-sm font-semibold mt-4">
                 Submit{' '}
                 <Icon icon="iconamoon:send" className="text-white text-2xl" />

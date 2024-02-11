@@ -17,13 +17,10 @@ function Process() {
         <div className="basis-1/2 flex flex-col justify-center items-start">
           <h1 className="text-3xl font-semibold">Work Process</h1>
           <p className="font-light text-gray-500 text-xs mt-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
-            arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices
-            eget lorem ac vestibulum. Suspendis imperdiet,
+            I start by looking into things, figuring out smart solutions. Then, I analyze data to make good choices. Next, I get creative and design things to look cool and work well for users.
           </p>
-          <p className="font-light text-gray-500 text-xs">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
-            arcu, varius eget velit non.
+          <p className="font-light text-gray-500 text-xs mb-3 sm:mb-0">
+            Finally, I launch projects, turning plans into real stuff in the digital world.
           </p>
         </div>
         <div className="basis-1/2 flex gap-4">
@@ -33,11 +30,11 @@ function Process() {
                 {proc.map((data, index) => (
                   <div
                     key={index}
-                    className="basis-1/2 aspect-square flex flex-col items-start justify-start rounded-md shadow-sm p-3 group bg-white/80 transition-all hover:bg-white hover:scale-105"
+                    className="basis-1/2 aspect-square flex flex-col items-start justify-start rounded-md shadow-sm p-3 group bg-white/80 transition-all cursor-pointer hover:bg-white hover:scale-105"
                   >
                     <Icon icon={data.icon} className='text-primary-500 bg-primary-100 rounded-md text-4xl p-1 group-hover:bg-primary-500 group-hover:text-white' />
                     <h1 className='text-sm font-semibold mt-2 mb-1'>
-                     {data.title}
+                      {data.title}
                     </h1>
                     <p className='text-xs font-light text-gray-500'>{data.description}</p>
                   </div>

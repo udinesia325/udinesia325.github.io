@@ -1,15 +1,15 @@
 const services = [
     {
         title: 'User Experience (UX)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.'
+        description: 'Crafting digital journeys that delight Elevating interactions to create seamless and enjoyable user experiences in every project.'
     },
     {
         title: 'User Interface (UI)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.'
+        description: 'Where aesthetics meet functionality. Designing visually appealing interfaces that not only look good but enhance the overall usability for a satisfying user interaction.'
     },
     {
         title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.'
+        description: 'Turning ideas into interactive realities. From server to browser, I navigate the full web development stack, bringing concepts to life with a combination of front-end finesse and back-end expertise.'
     },
 ]
 
