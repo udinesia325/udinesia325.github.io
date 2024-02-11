@@ -17,7 +17,10 @@ function Portfolio() {
             <img
               src={port.img}
               alt="demo website portfolio fahruddin"
-              className="w-full aspect-video"
+              className="aspect-video w-[300px] h-[170px]"
+              loading='lazy'
+              width={300}
+              height={170}
             />
             <div className='p-3'>
               <span className="text-xs text-gray-500 font-light">

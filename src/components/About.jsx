@@ -1,5 +1,5 @@
 import React from 'react'
-import dinn from '../assets/dinn.jpg'
+import dinn from '../assets/dinn.webp'
 import socialMedia from '../data/socialMedia'
 import { Icon } from '@iconify/react'
 
@@ -11,6 +11,8 @@ function About() {
           src={dinn}
           alt="gambar fahruddin"
           className="w-[240px] rounded-sm"
+          width={240}
+          height={300}
         />
         <div className='p-2 bg-white shadow-md rounded-md absolute z-[2] -bottom-4 flex gap-x-5 transition-all hover:scale-105'>
             { socialMedia.map((social, index) => (

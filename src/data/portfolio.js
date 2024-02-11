@@ -1,9 +1,9 @@
-import website_demo from "../assets/portfolio/website_demo.png"
-import education_system from "../assets/portfolio/education_system.png"
-import kafaa_landing_page from "../assets/portfolio/kafaa_landing_page.png"
-import nodewave from "../assets/portfolio/nodewave.png"
-import komune_app from "../assets/portfolio/komune_app.png"
-import persmaunira from "../assets/portfolio/persmaunira.png"
+import website_demo from "../assets/portfolio/website_demo.webp"
+import education_system from "../assets/portfolio/education_system.webp"
+import kafaa_landing_page from "../assets/portfolio/kafaa_landing_page.webp"
+import nodewave from "../assets/portfolio/nodewave.webp"
+import komune_app from "../assets/portfolio/komune_app.webp"
+import persmaunira from "../assets/portfolio/persmaunira.webp"
 
 
 const portfolio = [
