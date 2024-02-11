@@ -5,14 +5,14 @@ import skills from '../data/skills'
 function Skills() {
   return (
     <div className="w-full py-10 skill-gradient">
-      <h1 className="text-center text-3xl font-semibold text-gray-900">
+      <h1 className="text-center text-3xl font-semibold text-gray-900" data-aos='fade-in'>
         Skills
       </h1>
-      <p className="text-sm text-center mt-3 text-gray-500">
+      <p className="text-sm text-center mt-3 text-gray-500" data-aos='fade-in' data-aos-delay='100'>
         Below is a collection of frameworks, libraries <br /> and software
         development tools that I use
       </p>
-      <div className="mt-10 mx-auto flex flex-wrap gap-y-4 w-3/4">
+      <div className="mt-10 mx-auto flex flex-wrap gap-y-4 w-3/4" data-aos='fade-up' data-aos-delay='200'>
         {skills.map((skill, index) => (
           <Icon
             icon={skill}

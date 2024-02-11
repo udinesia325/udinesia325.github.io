@@ -13,6 +13,7 @@ function Navbar() {
       } else {
         setScroll(false)
       }
+      setOpenMenu(false)
     })
   }, [])
   const toggleMenu = () => {
@@ -32,15 +33,32 @@ function Navbar() {
         {navbar.map((link, index) => (
           <li
             key={index}
+            data-aos="fade-in"
+            data-aos-delay={100 * index}
             className="cursor-pointer transition-all hover:text-primary-400 hover:bg-primary-100/20 py-2 px-3 ml-2"
           >
             <a href={link.href}>{link.title}</a>
           </li>
         ))}
-        <li className="btn-primary ml-4"><a href="#contact">Contact</a></li>
+        <li
+          data-aos="zoom-in"
+          data-aos-delay="500"
+          className="btn-primary ml-4"
+        >
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
-      <div onClick={toggleMenu} className={`transition-all cursor-pointer block sm:hidden ${openMenu ? '-rotate-180' : 'rotate-0'}`}>
-        {openMenu ?  <Icon icon="mingcute:close-fill" className="text-gray-900 text-3xl" /> :  <Icon icon="gg:menu-right-alt" className="text-gray-900 text-3xl" />}
+      <div
+        onClick={toggleMenu}
+        className={`transition-all cursor-pointer block sm:hidden ${
+          openMenu ? '-rotate-180' : 'rotate-0'
+        }`}
+      >
+        {openMenu ? (
+          <Icon icon="mingcute:close-fill" className="text-gray-900 text-3xl" />
+        ) : (
+          <Icon icon="gg:menu-right-alt" className="text-gray-900 text-3xl" />
+        )}
       </div>
 
       <MobileMenu openMenu={openMenu} toggleMenu={toggleMenu} />

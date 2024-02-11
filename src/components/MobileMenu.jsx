@@ -4,7 +4,7 @@ import navbar from '../data/navbar'
 function MobileMenu({ openMenu, toggleMenu }) {
   return (
     <div
-      className={`absolute -z-10 w-[95%] mx-auto bg-white/80 backdrop-blur-sm border shadow-lg py-3 rounded-md transition-all block sm:hidden ${
+      className={`absolute -z-10 w-[95%] mx-auto bg-white/80 backdrop-blur-sm border shadow-lg py-3 rounded-md transition-all duration-300 ease-in-out block sm:hidden ${
         openMenu ? 'top-20' : '-top-72'
       }`}
     >
