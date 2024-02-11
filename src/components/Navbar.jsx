@@ -6,6 +6,7 @@ import MobileMenu from './MobileMenu'
 function Navbar() {
   const [scroll, setScroll] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
+  const [selectedNavbarItem, setSelectedNavbarItem] = useState('')
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -19,6 +20,14 @@ function Navbar() {
   const toggleMenu = () => {
     setOpenMenu((prev) => !prev)
   }
+
+  const handleSelectNavbar = (data) => {
+    setSelectedNavbarItem(data == 'Home' ? '' : data)
+  }
+
+  useEffect(() => {
+    document.title = `Fahruddin ${selectedNavbarItem ? '|':''}  ${selectedNavbarItem}`
+  }, [selectedNavbarItem])
 
   return (
     <div
@@ -35,6 +44,7 @@ function Navbar() {
             key={index}
             data-aos="fade-in"
             data-aos-delay={100 * index}
+            onClick={handleSelectNavbar.bind(this,link.title)}
             className="cursor-pointer transition-all hover:text-primary-400 hover:bg-primary-100/20 py-2 px-3 ml-2"
           >
             <a href={link.href}>{link.title}</a>
