@@ -38,23 +38,17 @@ function Navbar() {
       <a href="#" className="font-bold text-3xl">
         DINNN
       </a>
-      <ul className="hidden sm:flex items-center text-sm font-semibold">
+      <ul className="hidden sm:flex items-center text-sm font-semibold" >
         {navbar.map((link, index) => (
           <li
             key={index}
-            data-aos="fade-in"
-            data-aos-delay={100 * index}
             onClick={handleSelectNavbar.bind(this,link.title)}
-            className="cursor-pointer transition-all hover:text-primary-400 hover:bg-primary-100/20 py-2 px-3 ml-2"
+            className={`cursor-pointer !opacity-100 transition-all  ml-4 ${link.title == selectedNavbarItem ? "before:content-[''] before:w-6 before:h-1 before:absolute before:bottom-5 before:bg-purple-300 before:rounded-full text-primary-500 hover:text-primary-500" : 'hover:text-primary-700'}`}
           >
             <a href={link.href}>{link.title}</a>
           </li>
         ))}
-        <li
-          data-aos="zoom-in"
-          data-aos-delay="500"
-          className="btn-primary ml-4"
-        >
+        <li className="btn-primary ml-4 opacity-100">
           <a href="#contact">Contact</a>
         </li>
       </ul>
