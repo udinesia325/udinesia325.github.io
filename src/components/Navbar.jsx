@@ -31,7 +31,7 @@ function Navbar() {
 
   return (
     <div
-      className={`container max-w-5xl flex justify-between items-center py-4 px-2 sm:px-5 sticky top-0 z-50 transition-all ${
+      className={`container flex justify-between items-center py-4 px-2 sm:px-5 sticky top-0 z-50 transition-all ${
         scroll ? 'shadow-lg bg-white/80 backdrop-blur-sm' : 'bg-white'
       }`}
     >

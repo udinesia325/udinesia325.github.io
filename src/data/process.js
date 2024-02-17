@@ -15,7 +15,7 @@ const process = [
         description:'Turning data into decisions - I break down complexities, analyze patterns, and make informed choices.'
     },
     {
-        icon:'icon-park-outline:laptop-one',
+        icon:'material-symbols:rocket-outline',
         title:'4. Launch',
         description:'Turning blueprints into reality - Witness projects coming to life as I launch them, making an impact in the digital world.'
     },

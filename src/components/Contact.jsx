@@ -26,12 +26,12 @@ function Contact() {
   return (
     <>
       <div id='contact' className="w-full min-h-[950px] sm:min-h-[640px] contact-gradient relative flex justify-center items-center" data-aos='zoom-in'>
-        <div className="w-[95%] max-w-3xl bg-white px-5 pt-10 pb-8 rounded-md shadow-2xl absolute -bottom-10 flex  flex-col sm:flex-row justify-center items-start gap-3">
+        <div className="w-[95%] max-w-3xl bg-white px-5 pt-10 pb-8 rounded-md shadow-2xl absolute -bottom-10 flex flex-col sm:flex-row justify-center items-start gap-3 lg:max-w-4xl">
           <div className="basis-1/2">
-            <h1 className="font-semibold text-lg">
+            <h1 className="font-semibold text-lg lg:text-2xl">
               Let’s discuss your Project
             </h1>
-            <p className="text-xs font-light text-gray-500 mt-3">
+            <p className="text-xs font-light text-gray-500 mt-3 lg:text-sm">
               Want to consult or discuss, even design a system <br className="hidden sm:block" />{' '}
               with me? here is my address
             </p>
@@ -57,7 +57,7 @@ function Contact() {
                   <a key={index} href={social.link} target="_blank" aria-label={social.link}>
                     <Icon
                       icon={social.icon}
-                      className="text-3xl p-1 rounded-md text-purple-500 hover:text-white hover:bg-primary-500"
+                      className="text-3xl p-1 rounded-md text-purple-500 hover:text-white hover:bg-primary-500 lg:text-4xl"
                     />
                   </a>
                 ))}
@@ -65,7 +65,7 @@ function Contact() {
             </div>
           </div>
           <div className="basis-1/2">
-            <p className="text-xs font-light text-gray-500 mt-3">
+            <p className="text-xs font-light text-gray-500 mt-3 lg:text-sm">
               Fill out the form below to connect directly{' '}
               <br className="hidden sm:block" />
               to me via email!
@@ -95,7 +95,7 @@ function Contact() {
                 />
               </div>
               <Input name="Message" placeholder="Message*" type="text" required={true} />
-              <button className="btn-primary flex-none flex items-center gap-3 w-fit text-sm font-semibold mt-4">
+              <button className="btn-primary flex-none flex items-center gap-3 w-fit text-sm font-semibold mt-4 lg:text-lg">
                 Submit{' '}
                 <Icon icon="iconamoon:send" className="text-white text-2xl" />
               </button>

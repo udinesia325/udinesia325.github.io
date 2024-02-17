@@ -15,7 +15,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <div className="container max-w-5xl">
+      <div className="container">
         <Process />
         <Portfolio />
         <Divider />
