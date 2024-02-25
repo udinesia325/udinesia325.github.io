@@ -7,7 +7,7 @@ function Input({ type, name, placeholder, className, required = false }) {
       <input
         type={type}
         id={id}
-        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-primary-300 appearance-none dark:border-gray-400 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-600 peer"
+        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-primary-300 appearance-none dark:border-gray-400 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-600 peer dark:text-slate-200"
         placeholder=" "
         name={name}
         required={required}

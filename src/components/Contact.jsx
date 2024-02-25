@@ -26,12 +26,12 @@ function Contact() {
   return (
     <>
       <div id='contact' className="w-full min-h-[950px] sm:min-h-[640px] contact-gradient relative flex justify-center items-center" data-aos='zoom-in'>
-        <div className="w-[95%] max-w-3xl bg-white px-5 pt-10 pb-8 rounded-md shadow-2xl absolute -bottom-10 flex flex-col sm:flex-row justify-center items-start gap-3 lg:max-w-4xl">
+        <div className="w-[95%] max-w-3xl bg-white px-5 pt-10 pb-8 rounded-md shadow-2xl absolute -bottom-10 flex flex-col sm:flex-row justify-center items-start gap-3 lg:max-w-4xl dark:bg-slate-900">
           <div className="basis-1/2">
-            <h1 className="font-semibold text-lg lg:text-2xl">
+            <h1 className="font-semibold text-lg lg:text-2xl dark:text-slate-200">
               Let’s discuss your Project
             </h1>
-            <p className="text-xs font-light text-gray-500 mt-3 lg:text-sm">
+            <p className="text-xs font-light text-gray-500 mt-3 lg:text-sm dark:text-slate-400">
               Want to consult or discuss, even design a system <br className="hidden sm:block" />{' '}
               with me? here is my address
             </p>
@@ -39,20 +39,20 @@ function Contact() {
               {contact.map((con, index) => (
                 <div
                   key={index}
-                  className="flex-none w-[90%] bg-white rounded-md p-3 shad hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] grid grid-cols-[50px_1fr] grid-rows-2 cursor-pointer"
+                  className="flex-none w-[90%] bg-white rounded-md p-3 shad hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] grid grid-cols-[50px_1fr] grid-rows-2 cursor-pointer dark:bg-slate-700"
                 >
                   <Icon
                     icon={con.icon}
                     className="text-4xl p-1 bg-primary-100 text-primary-500 rounded row-span-2"
                   />
-                  <h2 className="text-sm">{con.title}</h2>
-                  <span className="text-xs text-gray-500 font-light">
+                  <h2 className="text-sm dark:text-slate-200">{con.title}</h2>
+                  <span className="text-xs text-gray-500 font-light dark:text-slate-400">
                     {con.content}
                   </span>
                 </div>
               ))}
 
-              <div className="p-2 bg-white flex gap-x-3">
+              <div className="p-2 bg-white flex gap-x-3 dark:bg-transparent">
                 {socialMedia.map((social, index) => (
                   <a key={index} href={social.link} target="_blank" aria-label={social.link}>
                     <Icon
@@ -65,7 +65,7 @@ function Contact() {
             </div>
           </div>
           <div className="basis-1/2">
-            <p className="text-xs font-light text-gray-500 mt-3 lg:text-sm">
+            <p className="text-xs font-light text-gray-500 mt-3 lg:text-sm dark:text-slate-400">
               Fill out the form below to connect directly{' '}
               <br className="hidden sm:block" />
               to me via email!
