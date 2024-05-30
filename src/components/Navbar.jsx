@@ -26,7 +26,7 @@ function Navbar({ dark, setDark}) {
   }
 
   useEffect(() => {
-    document.title = `Fahruddin ${selectedNavbarItem ? '|':''}  ${selectedNavbarItem}`
+    document.title = `Ahmad Fahruddin Salim ${selectedNavbarItem ? '-':''}  ${selectedNavbarItem}`
   }, [selectedNavbarItem])
 
   return (
