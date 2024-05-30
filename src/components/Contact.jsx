@@ -28,9 +28,9 @@ function Contact() {
       <div id='contact' className="w-full min-h-[950px] sm:min-h-[640px] contact-gradient relative flex justify-center items-center" data-aos='zoom-in'>
         <div className="w-[95%] max-w-3xl bg-white px-5 pt-10 pb-8 rounded-md shadow-2xl absolute -bottom-10 flex flex-col sm:flex-row justify-center items-start gap-3 lg:max-w-4xl dark:bg-slate-900">
           <div className="basis-1/2">
-            <h1 className="font-semibold text-lg lg:text-2xl dark:text-slate-200">
+            <h3 className="font-semibold text-lg lg:text-2xl dark:text-slate-200">
               Let’s discuss your Project
-            </h1>
+            </h3>
             <p className="text-xs font-light text-gray-500 mt-3 lg:text-sm dark:text-slate-400">
               Want to consult or discuss, even design a system <br className="hidden sm:block" />{' '}
               with me? here is my address
@@ -45,7 +45,7 @@ function Contact() {
                     icon={con.icon}
                     className="text-4xl p-1 bg-primary-100 text-primary-500 rounded row-span-2"
                   />
-                  <h2 className="text-sm dark:text-slate-200">{con.title}</h2>
+                  <h4 className="text-sm dark:text-slate-200">{con.title}</h4>
                   <span className="text-xs text-gray-500 font-light dark:text-slate-400">
                     {con.content}
                   </span>

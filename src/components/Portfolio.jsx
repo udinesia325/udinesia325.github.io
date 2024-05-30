@@ -26,7 +26,7 @@ function Portfolio() {
               <span className="text-xs text-gray-500 font-light lg:text-sm dark:text-slate-400">
                 {port.category}
               </span>
-              <h1 className="font-semibold mt-[2px] text-lg dark:text-slate-300">{port.title}</h1>
+              <h2 className="font-semibold mt-[2px] text-lg dark:text-slate-300">{port.title}</h2>
               <p className="text-sm text-gray-500 font-light mt-` mb-1 lg:mt-2 lg:mb-4 dark:text-slate-400">
                 {port.description}
               </p>

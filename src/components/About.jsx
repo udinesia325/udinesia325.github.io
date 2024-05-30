@@ -9,7 +9,7 @@ function About() {
       <div className="basis-1/2 flex place-content-center relative">
         <img
           src={dinn}
-          alt="gambar fahruddin"
+          alt="Ahmad Fahruddin Salim Web Developer Portfolio"
           className="w-[240px] rounded-sm lg:w-64"
           width={240}
           height={300}

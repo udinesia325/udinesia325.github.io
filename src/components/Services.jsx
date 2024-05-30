@@ -21,7 +21,7 @@ function Services() {
         <div className="basis-1/2 flex flex-col gap-4" data-aos='fade-up'>
             {services.map((service , index) => (
                 <div data-aos='fade-up' data-aos-delay={100 * index} key={index} className="flex flex-col gap-3 p-4 bg-white transition-all cursor-pointer hover:border-l-2 hover:border-l-primary-500 dark:bg-slate-700 dark:text-slate-200">
-                    <h1 className='text-sm font-semibold lg:text-lg'>{service.title}</h1>
+                    <h2 className='text-sm font-semibold lg:text-lg'>{service.title}</h2>
                     <p className='text-xs text-gray-600 font-light lg:text-sm dark:text-slate-400'>{service.description}</p>
                 </div>
             ))}

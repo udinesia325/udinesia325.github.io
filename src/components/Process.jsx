@@ -35,9 +35,9 @@ function Process() {
                     data-aos-delay={200 * index}
                   >
                     <Icon icon={data.icon} className='text-primary-500 bg-primary-100 rounded-md text-4xl p-1 group-hover:bg-primary-500 group-hover:text-white' />
-                    <h1 className='text-sm font-semibold mt-2 mb-1 lg:text-lg dark:text-slate-200'>
+                    <h2 className='text-sm font-semibold mt-2 mb-1 lg:text-lg dark:text-slate-200'>
                       {data.title}
-                    </h1>
+                    </h2>
                     <p className='text-xs font-light text-gray-500 lg:text-sm dark:text-slate-400'>{data.description}</p>
                   </div>
                 ))}

@@ -18,14 +18,14 @@ function Hero() {
                         <div className="w-full mt-10 flex gap-1 flex-col sm:flex-row">
                             {heroData.map((data,index) => (
                                 <div data-aos='flip-left' data-aos-delay={200 * index} key={index} className="basis-1/3 flex flex-col items-center gap-y-2 py-2 px-3 bg-primary-100 cursor-pointer hover:scale-105">
-                                    <h1 className='text-lg font-semibold lg:text-2xl'>{ data.title} </h1>
+                                    <h2 className='text-lg font-semibold lg:text-2xl'>{ data.title} </h2>
                                     <p className='text-sm text-gray-900 text-center font-light lg:text-lg'>{ data.subtitle }</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                     <div className='basis-1/2 hidden sm:flex items-center justify-center sm:items-end'>
-                        <img src={dinn} data-aos='zoom-in' alt="gambar fahruddin" className='w-full sm:w-[300px] rounded-md shadow-lg lg:w-96' />
+                        <img src={dinn} data-aos='zoom-in' alt="Ahmad Fahruddin Salim Web Developer Portfolio" className='w-full sm:w-[300px] rounded-md shadow-lg lg:w-96' />
                     </div>
                 </div>
                 <br id='about'></br>
