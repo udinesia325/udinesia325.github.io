@@ -14,7 +14,7 @@ function Skills() {
       </p>
       <div className="mt-10 mx-auto flex flex-wrap gap-y-4 w-3/4" data-aos='fade-up' data-aos-delay='200'>
         {skills.map((skill, index) => (
-          <div className='basis-1/3 sm:basis-1/6 flex justify-center items-center'>
+          <div key={index} className='basis-1/3 sm:basis-1/6 flex justify-center items-center'>
             <div className='group transition-all text-gray-500 hover:text-black relative text-4xl w-fit'>
               <p className='hidden md:hidden md:group-hover:block absolute -top-5 right-0 text-left bg-black text-white px-2 rounded-sm text-xs'>{skill.name}</p>
               <Icon
