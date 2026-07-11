@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Surfaces ─────────────────────────────────────── */
+  --color-void: #050816;
+  --color-abyss: #0b1023;
+  --color-card: rgba(255, 255, 255, 0.05);
+  --color-line: rgba(255, 255, 255, 0.08);
+
+  /* ── Brand ────────────────────────────────────────── */
+  --color-primary: #7c3aed;
+  --color-secondary: #06b6d4;
+  --color-highlight: #ec4899;
+  --color-success: #10b981;
+
+  /* ── Text ─────────────────────────────────────────── */
+  --color-ink: #ffffff;
+  --color-muted: #94a3b8;
+  --color-faint: #64748b;
+
+  /* ── Typography ───────────────────────────────────── */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-code: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ── Motion ───────────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+
+  /* ── Type scale (fluid) ───────────────────────────── */
+  --text-hero: clamp(2.75rem, 8vw, 7rem);
+  --text-hero--line-height: 0.95;
+  --text-section: clamp(2rem, 5vw, 3.75rem);
+  --text-section--line-height: 1.05;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 45s linear infinite;
+  --animate-aurora: aurora 18s ease-in-out infinite alternate;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes aurora {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(6%, -4%) scale(1.15);
+    }
+    100% {
+      transform: translate(-5%, 5%) scale(0.95);
+    }
+  }
+}
+
+/* ── Base ───────────────────────────────────────────── */
+html {
+  scroll-behavior: auto; /* Lenis owns scrolling */
+}
+
+/* hidden = fallback for browsers without clip (older mobile Safari/WebView) */
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+body {
+  @apply bg-void text-ink font-body antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 60%, transparent);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  border: 2px solid var(--color-void);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Utilities ──────────────────────────────────────── */
+@utility container-site {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-inline: 1.5rem;
+  @media (width >= 48rem) {
+    padding-inline: 3rem;
+  }
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+@utility text-gradient {
+  background: linear-gradient(
+    100deg,
+    #fff 20%,
+    #c4b5fd 45%,
+    #7c3aed 65%,
+    #06b6d4 95%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-accent {
+  background: linear-gradient(90deg, #7c3aed, #ec4899, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Animated conic border — apply to a relatively-positioned rounded card */
+@utility glow-border {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--border-angle, 0deg),
+      transparent 10%,
+      #7c3aed 30%,
+      #06b6d4 50%,
+      transparent 70%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out-expo);
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    animation: border-rotate 3s linear infinite;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+/* ── Reduced motion ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hero architecture network — glass icon chips rendered via drei <Html>. */
+.net-node {
+  --accent: var(--color-secondary);
+  display: grid;
+  place-items: center;
+  width: calc(44px * var(--s, 1));
+  height: calc(44px * var(--s, 1));
+  border-radius: 14px;
+  color: #c7d2fe;
+  /* opaque so connectors passing behind are hidden -> icons read as connected */
+  background: #12132b;
+  border: 1px solid rgba(129, 140, 248, 0.28);
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.18);
+  transition:
+    transform 0.35s var(--ease-out-expo),
+    box-shadow 0.35s var(--ease-out-expo),
+    color 0.35s var(--ease-out-expo),
+    border-color 0.35s var(--ease-out-expo);
+  will-change: transform;
+}
+.net-node[data-hub="1"] {
+  color: #ddd6fe;
+  background: #1a1638;
+  border-color: rgba(124, 58, 237, 0.45);
+  box-shadow: 0 0 26px rgba(124, 58, 237, 0.3);
+}
+.net-node[data-hovered="1"] {
+  transform: scale(1.14);
+  color: #ffffff;
+  border-color: rgba(196, 181, 253, 0.6);
+  box-shadow: 0 0 34px rgba(139, 92, 246, 0.45);
+}
+.net-node svg {
+  width: calc(22px * var(--s, 1));
+  height: calc(22px * var(--s, 1));
+}
