@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://udinesia325.github.io/sitemap.xml
+Sitemap: https://fahruddin.my.id/sitemap.xml
