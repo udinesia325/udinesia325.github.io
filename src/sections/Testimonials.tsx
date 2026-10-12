@@ -37,7 +37,7 @@ export function Testimonials() {
     <section id="testimonials" className="relative overflow-hidden py-28 md:py-40">
       <div className="container-site">
         <SectionHeading
-          eyebrow="testimonials"
+          eyebrow="client testimonials"
           title="What partners say."
           description="Feedback from the people I've built and shipped with."
           align="center"

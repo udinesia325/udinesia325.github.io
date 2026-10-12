@@ -4,7 +4,7 @@ import { gsap, EASE, prefersReducedMotion } from "@/animations/gsap";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { EXPERIENCE } from "@/data/content";
 
-const START_YEAR = 2023;
+const START_YEAR = 2022; // first entry in EXPERIENCE
 const NUMBER_WORDS = [
   "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
 ];
@@ -60,7 +60,7 @@ export function Experience() {
     <section id="experience" ref={rootRef} className="relative py-28 md:py-40">
       <div className="container-site">
         <SectionHeading
-          eyebrow="journey"
+          eyebrow="work experience"
           title={`${yearsOfShippingWord()} years of shipping.`}
           description="From freelance foundations to owning end-to-end delivery of data-heavy production platforms."
         />

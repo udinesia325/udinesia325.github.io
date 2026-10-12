@@ -79,7 +79,7 @@ export function TechStack() {
       />
       <div className="container-site">
         <SectionHeading
-          eyebrow="stack"
+          eyebrow="tech stack"
           title="Tools I bet production on."
           description="A stack chosen for reliability under load — not hype. Every tool here has shipped real systems."
         />

@@ -34,20 +34,23 @@ export function SectionHeading({ eyebrow, title, description, align = "left" }: 
 
   return (
     <div ref={ref} className={align === "center" ? "text-center" : ""}>
-      <div className="overflow-hidden">
-        <p
-          data-reveal
-          className="mb-4 font-code text-xs tracking-[0.3em] text-secondary uppercase"
-        >
-          {"// "}
-          {eyebrow}
-        </p>
-      </div>
-      <div className="overflow-hidden pb-1">
-        <h2 data-reveal className="font-display text-section font-bold text-balance">
-          {title}
-        </h2>
-      </div>
+      {/* eyebrow is part of the h2 so the heading says what the section is, not only the slogan */}
+      <h2>
+        <span className="block overflow-hidden">
+          <span
+            data-reveal
+            className="mb-4 block font-code text-xs tracking-[0.3em] text-secondary uppercase before:content-['//_']"
+          >
+            {eyebrow}
+            <span className="sr-only"> — </span>
+          </span>
+        </span>
+        <span className="block overflow-hidden pb-1">
+          <span data-reveal className="block font-display text-section font-bold text-balance">
+            {title}
+          </span>
+        </span>
+      </h2>
       {description && (
         <div className="overflow-hidden">
           <p

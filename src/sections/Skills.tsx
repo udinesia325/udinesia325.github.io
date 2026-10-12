@@ -85,7 +85,7 @@ export function Skills() {
       />
       <div className="container-site">
         <SectionHeading
-          eyebrow="capabilities"
+          eyebrow="skills"
           title="Depth across the stack."
           description="No self-assigned percentages — just the tools and problem spaces proven in production."
         />

@@ -66,7 +66,7 @@ export function About() {
     <section id="about" ref={rootRef} className="relative py-28 md:py-40">
       <div className="container-site">
         <SectionHeading
-          eyebrow="about"
+          eyebrow="about me"
           title="Systems over shortcuts."
           description={PROFILE.intro}
         />

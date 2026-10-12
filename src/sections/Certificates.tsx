@@ -34,7 +34,7 @@ export function Certificates() {
     <section id="certificates" ref={rootRef} className="relative py-28 md:py-40">
       <div className="container-site">
         <SectionHeading
-          eyebrow="credentials"
+          eyebrow="certifications"
           title="Proof of the craft."
           description="In the age of AI, staying sharp means proving it — certified by Anthropic across Claude and agentic AI workflows."
         />
@@ -65,7 +65,8 @@ export function Certificates() {
                   </span>
                 </div>
                 <div className="p-5">
-                  <p className="font-code text-xs text-faint">
+                  <h3 className="font-display text-base font-semibold text-ink">{cert.title}</h3>
+                  <p className="mt-1 font-code text-xs text-faint">
                     {cert.issuer} · {cert.year}
                   </p>
                 </div>

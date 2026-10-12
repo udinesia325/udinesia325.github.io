@@ -148,7 +148,7 @@ export function Projects() {
       />
       <div className="container-site">
         <SectionHeading
-          eyebrow="selected work"
+          eyebrow="selected projects"
           title="Built to ship. Built to last."
           description="A selection of production systems — financial platforms, realtime infrastructure, and polished brand experiences."
         />
