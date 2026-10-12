@@ -22,14 +22,19 @@ export function Particles({ density = 70 }: { density?: number }) {
 
     let dots: Dot[] = [];
     let raf = 0;
+    // cached size: reading clientWidth every frame forced a layout per frame
+    let w = 0;
+    let h = 0;
     const mouse = { x: -9999, y: -9999 };
     const dpr = Math.min(window.devicePixelRatio, 2);
 
     const resize = () => {
-      const { clientWidth: w, clientHeight: h } = canvas;
+      w = canvas.clientWidth;
+      h = canvas.clientHeight;
       canvas.width = w * dpr;
       canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.fillStyle = "rgb(196, 181, 253)"; // canvas resize resets context state
       const count = Math.min(density, Math.floor((w * h) / 14000));
       dots = Array.from({ length: count }, () => ({
         x: Math.random() * w,
@@ -42,8 +47,6 @@ export function Particles({ density = 70 }: { density?: number }) {
     };
 
     const step = () => {
-      const w = canvas.clientWidth;
-      const h = canvas.clientHeight;
       ctx.clearRect(0, 0, w, h);
       for (const d of dots) {
         const dx = d.x - mouse.x;
@@ -60,7 +63,7 @@ export function Particles({ density = 70 }: { density?: number }) {
         d.y = (d.y + d.vy + h) % h;
         ctx.beginPath();
         ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(196, 181, 253, ${d.a})`;
+        ctx.globalAlpha = d.a;
         ctx.fill();
       }
       raf = requestAnimationFrame(step);
@@ -72,12 +75,19 @@ export function Particles({ density = 70 }: { density?: number }) {
       mouse.y = e.clientY - rect.top;
     };
 
+    // only animate while the hero is on screen
+    const io = new IntersectionObserver(([entry]) => {
+      cancelAnimationFrame(raf);
+      if (entry.isIntersecting) raf = requestAnimationFrame(step);
+    });
+
     resize();
-    step();
+    io.observe(canvas);
     window.addEventListener("resize", resize);
     window.addEventListener("mousemove", onMouse, { passive: true });
     return () => {
       cancelAnimationFrame(raf);
+      io.disconnect();
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", onMouse);
     };

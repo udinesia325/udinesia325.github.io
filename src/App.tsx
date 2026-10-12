@@ -1,25 +1,24 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, type ComponentType } from "react";
 import { Noise } from "@/components/effects/Noise";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { Hero } from "@/sections/Hero";
-import { About } from "@/sections/About";
-import { TechStack } from "@/sections/TechStack";
-import { Projects } from "@/sections/Projects";
 
-// below-fold sections load in a second chunk
-const Experience = lazy(() =>
-  import("@/sections/Experience").then((m) => ({ default: m.Experience })),
-);
-const Skills = lazy(() => import("@/sections/Skills").then((m) => ({ default: m.Skills })));
-const Testimonials = lazy(() =>
-  import("@/sections/Testimonials").then((m) => ({ default: m.Testimonials })),
-);
-const Certificates = lazy(() =>
-  import("@/sections/Certificates").then((m) => ({ default: m.Certificates })),
-);
-const Contact = lazy(() => import("@/sections/Contact").then((m) => ({ default: m.Contact })));
+// Everything below the hero is a lazy chunk in its own Suspense boundary. The
+// prerendered HTML is already on screen, and separate boundaries let React hydrate
+// (and run each section's GSAP setup) one section per task instead of one long task.
+const section = (load: () => Promise<ComponentType>) => lazy(() => load().then((C) => ({ default: C })));
+const About = section(() => import("@/sections/About").then((m) => m.About));
+const TechStack = section(() => import("@/sections/TechStack").then((m) => m.TechStack));
+const Projects = section(() => import("@/sections/Projects").then((m) => m.Projects));
+const Experience = section(() => import("@/sections/Experience").then((m) => m.Experience));
+const Skills = section(() => import("@/sections/Skills").then((m) => m.Skills));
+const Testimonials = section(() => import("@/sections/Testimonials").then((m) => m.Testimonials));
+const Certificates = section(() => import("@/sections/Certificates").then((m) => m.Certificates));
+const Contact = section(() => import("@/sections/Contact").then((m) => m.Contact));
+
+const BELOW_FOLD = [About, TechStack, Projects, Experience, Skills, Testimonials, Certificates, Contact];
 
 /** Reserves space while a lazy section loads, so ScrollTrigger doesn't jump. */
 function SectionFallback() {
@@ -35,16 +34,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <TechStack />
-        <Projects />
-        <Suspense fallback={<SectionFallback />}>
-          <Experience />
-          <Skills />
-          <Testimonials />
-          <Certificates />
-          <Contact />
-        </Suspense>
+        {BELOW_FOLD.map((Section, i) => (
+          <Suspense key={i} fallback={<SectionFallback />}>
+            <Section />
+          </Suspense>
+        ))}
       </main>
       <Footer />
     </>
