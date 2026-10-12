@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* Self-hosted latin subsets of Google's variable fonts (OFL). Weight ranges match
+   the old Google Fonts request so rendering is identical. */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/space-grotesk.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/inter.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono.woff2") format("woff2");
+}
+
 @theme {
   /* ── Surfaces ─────────────────────────────────────── */
   --color-void: #050816;

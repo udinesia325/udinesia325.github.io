@@ -113,7 +113,7 @@ export function Experience() {
                     {entry.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-full border border-line px-2.5 py-0.5 font-code text-[11px] text-faint"
+                        className="rounded-full border border-line px-2.5 py-0.5 font-code text-xs text-faint"
                       >
                         {tech}
                       </span>

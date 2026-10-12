@@ -16,19 +16,19 @@ export function Footer() {
           </p>
         </div>
 
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Footer">
+        <nav className="flex flex-wrap justify-center gap-x-6" aria-label="Footer">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted transition-colors duration-300 hover:text-ink"
+              className="py-3 text-sm text-muted transition-colors duration-300 hover:text-ink"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center">
           {SOCIALS.slice(0, 3).map(({ label, href, icon: Icon }) => (
             <a
               key={label}
@@ -36,7 +36,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label={label}
-              className="text-muted transition-all duration-300 hover:-translate-y-0.5 hover:text-ink"
+              className="flex size-11 items-center justify-center text-muted transition-all duration-300 hover:-translate-y-0.5 hover:text-ink"
             >
               <Icon size={18} />
             </a>

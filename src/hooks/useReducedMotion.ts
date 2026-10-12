@@ -10,5 +10,6 @@ export function useReducedMotion(): boolean {
       return () => mq.removeEventListener("change", cb);
     },
     () => window.matchMedia(query).matches,
+    () => false, // server snapshot (prerender)
   );
 }

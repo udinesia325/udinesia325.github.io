@@ -40,7 +40,7 @@ export const PROFILE = {
   role: "Fullstack Web Developer",
   location: "Malang, Indonesia",
   headline: "I engineer software that holds up under real-world load.",
-  roles: ["System Thinker", "Fullstack Engineer", "Problem Solver", "API Architect"],
+  roles: ["Fullstack Web Developer", "System Thinker", "Problem Solver", "API Architect"],
   intro:
     "Fullstack Web Developer with 3+ years of experience building structured, scalable, production-ready web applications — end to end, from database architecture and REST APIs to responsive, efficient interfaces.",
   about: [

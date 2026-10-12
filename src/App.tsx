@@ -1,8 +1,7 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense } from "react";
 import { Noise } from "@/components/effects/Noise";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { Preloader } from "@/components/Preloader";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
@@ -28,16 +27,14 @@ function SectionFallback() {
 }
 
 export default function App() {
-  const [loaded, setLoaded] = useState(false);
-  useSmoothScroll(loaded);
+  useSmoothScroll();
 
   return (
     <>
-      {!loaded && <Preloader onComplete={() => setLoaded(true)} />}
       <Noise />
-      <Navbar visible={loaded} />
+      <Navbar />
       <main>
-        <Hero started={loaded} />
+        <Hero />
         <About />
         <TechStack />
         <Projects />

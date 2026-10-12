@@ -3,26 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050816" />
     <title>Ahmad Fahruddin Salim — Fullstack Web Developer</title>
     <meta
       name="description"
       content="Fullstack Web Developer engineering structured, scalable, production-ready web applications — from database architecture and REST APIs to cinematic, high-performance interfaces."
     />
     <meta name="author" content="Ahmad Fahruddin Salim" />
-    <link rel="canonical" href="https://udinesia325.github.io/" />
+    <link rel="canonical" href="https://fahruddin.my.id/" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://udinesia325.github.io/" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://fahruddin.my.id/" />
     <meta property="og:site_name" content="Ahmad Fahruddin Salim" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="Ahmad Fahruddin Salim — Fullstack Web Developer" />
     <meta
       property="og:description"
       content="Engineering software that holds up under real-world load. React, Laravel, Go, Node.js."
     />
-    <meta property="og:image" content="https://udinesia325.github.io/dinn_logo.webp" />
-    <meta property="og:image:alt" content="Ahmad Fahruddin Salim logo" />
+    <meta property="og:image" content="https://fahruddin.my.id/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ahmad Fahruddin Salim — Fullstack Web Developer" />
+    <meta property="profile:first_name" content="Ahmad Fahruddin" />
+    <meta property="profile:last_name" content="Salim" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -31,17 +38,58 @@
       name="twitter:description"
       content="Engineering software that holds up under real-world load. React, Laravel, Go, Node.js."
     />
-    <meta name="twitter:image" content="https://udinesia325.github.io/dinn_logo.webp" />
+    <meta name="twitter:image" content="https://fahruddin.my.id/og-image.png" />
+    <meta name="twitter:image:alt" content="Ahmad Fahruddin Salim — Fullstack Web Developer" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Self-hosted fonts (see src/index.css); preload the two the hero needs -->
+    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://fahruddin.my.id/#website",
+            "url": "https://fahruddin.my.id/",
+            "name": "Ahmad Fahruddin Salim",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://fahruddin.my.id/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://fahruddin.my.id/#profilepage",
+            "url": "https://fahruddin.my.id/",
+            "name": "Ahmad Fahruddin Salim — Fullstack Web Developer",
+            "isPartOf": { "@id": "https://fahruddin.my.id/#website" },
+            "inLanguage": "en",
+            "mainEntity": { "@id": "https://fahruddin.my.id/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://fahruddin.my.id/#person",
+            "name": "Ahmad Fahruddin Salim",
+            "alternateName": "DINN",
+            "jobTitle": "Fullstack Web Developer",
+            "description": "Fullstack Web Developer with 3+ years of experience building structured, scalable, production-ready web applications.",
+            "url": "https://fahruddin.my.id/",
+            "image": "https://fahruddin.my.id/og-image.png",
+            "email": "mailto:contact@fahruddin.my.id",
+            "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressCountry": "ID" },
+            "knowsAbout": ["React", "Vue", "AngularJS", "Laravel", "Express.js", "Go", "Node.js", "REST APIs", "Relational database design"],
+            "sameAs": [
+              "https://github.com/udinesia325",
+              "https://www.linkedin.com/in/ahmad-fahruddin-salim",
+              "https://www.instagram.com/dinnn.dev"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,37 @@
+# Ahmad Fahruddin Salim
+
+> Fullstack Web Developer based in Malang, Indonesia, with 3+ years of experience building structured, scalable, production-ready web applications — from relational database design and REST APIs (Laravel, Express.js, Go, Node.js) to frontends in React, Vue and AngularJS. Also known as DINN.
+
+## Profile
+
+- Name: Ahmad Fahruddin Salim (alias: DINN)
+- Role: Fullstack Web Developer
+- Location: Malang, Indonesia
+- Contact: contact@fahruddin.my.id
+- Website: https://fahruddin.my.id/
+
+## Experience
+
+- 2023–2026 — Fullstack Web Developer, Venturo Expert Programmer (Malang): real-time community platform with chat, activity feeds, photo albums and event management (Laravel, Go, WebSocket, Redis, MySQL).
+- 2023 — Fullstack Web Developer, Kafa'a by Bonyan International University (Banten): educational management platform with grade transcripts, assessments and multi-role access control (React, Express.js, MongoDB).
+- 2022–2023 — Freelance Web Developer: company profiles and custom web apps for local businesses (React, Laravel, TailwindCSS).
+
+## Selected projects
+
+- FinSight (2025): accounting and financial data platform with hierarchical structures, large-scale exports and optimized queries. Laravel, React, MySQL.
+- Community Platform (2025): real-time chat, activity feeds, albums and event management. Laravel, Vue.js, Go, MySQL, Redis, WebSocket.
+- Education System (2023): academic platform with transcripts, assessments and granular multi-role permissions. React, Express.js, MongoDB.
+- [Dream Agency](https://dinn-dream-agency.vercel.app/) (2023): motion-first company profile. React, TailwindCSS. Source: https://github.com/udinesia325/dream-agency
+
+## Skills
+
+- Frontend: React, Vue, AngularJS, TypeScript, TailwindCSS, Laravel Blade
+- Backend: Laravel, Express.js, Go (Gin), CodeIgniter, Node.js, REST APIs
+- Data: MySQL, PostgreSQL, MongoDB, Redis, relational design, query optimization
+- Integrations: WhatsApp API, META API, WebSocket realtime
+
+## Links
+
+- [GitHub](https://github.com/udinesia325)
+- [LinkedIn](https://www.linkedin.com/in/ahmad-fahruddin-salim)
+- [Instagram](https://www.instagram.com/dinnn.dev)

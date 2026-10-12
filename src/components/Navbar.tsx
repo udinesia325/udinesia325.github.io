@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { gsap, EASE, prefersReducedMotion } from "@/animations/gsap";
+import { gsap, EASE } from "@/animations/gsap";
 import { NAV_LINKS, PROFILE, SOCIALS } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 /** Floating glass pill navbar that condenses on scroll + full-screen mobile menu. */
-export function Navbar({ visible }: { visible: boolean }) {
+export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -17,15 +16,6 @@ export function Navbar({ visible }: { visible: boolean }) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    if (!visible || !navRef.current || prefersReducedMotion()) return;
-    gsap.fromTo(
-      navRef.current,
-      { y: -80, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: EASE.out, delay: 0.3 },
-    );
-  }, [visible]);
 
   useEffect(() => {
     const menu = menuRef.current;
@@ -49,10 +39,8 @@ export function Navbar({ visible }: { visible: boolean }) {
   return (
     <>
       <header
-        ref={navRef}
         className={cn(
           "fixed inset-x-0 top-0 z-[100] transition-all duration-500",
-          visible ? "" : "pointer-events-none opacity-0",
           // full-width solid blur bar on scroll so logo + links + CTA stay legible
           // over any content passing beneath; transparent at the top of the page.
           // No border — a bottom border reads as a white line mid-transition; the
@@ -107,6 +95,7 @@ export function Navbar({ visible }: { visible: boolean }) {
         className="fixed inset-0 z-[150] flex flex-col justify-between bg-abyss/95 p-8 backdrop-blur-2xl md:hidden"
         style={{ clipPath: "circle(0% at calc(100% - 3rem) 3rem)" }}
         aria-hidden={!open}
+        inert={!open}
       >
         <div className="flex items-center justify-between">
           <span className="font-display text-xl font-bold">

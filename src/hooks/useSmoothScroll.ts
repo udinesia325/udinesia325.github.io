@@ -3,9 +3,9 @@ import Lenis from "lenis";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/animations/gsap";
 
 /** Lenis smooth scroll wired into GSAP's ticker + ScrollTrigger. */
-export function useSmoothScroll(enabled: boolean) {
+export function useSmoothScroll() {
   useEffect(() => {
-    if (!enabled || prefersReducedMotion()) return;
+    if (prefersReducedMotion()) return;
 
     const lenis = new Lenis({
       lerp: 0.11,
@@ -34,5 +34,5 @@ export function useSmoothScroll(enabled: boolean) {
       gsap.ticker.remove(tick);
       lenis.destroy();
     };
-  }, [enabled]);
+  }, []);
 }
