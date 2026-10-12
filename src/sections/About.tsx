@@ -16,6 +16,8 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
       el.textContent = `${value}`;
       return;
     }
+    // static HTML carries the real value for crawlers; count up from 0 in the browser
+    el.textContent = "0";
     const ctx = gsap.context(() => {
       gsap.to(
         { v: 0 },
@@ -36,7 +38,7 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
   return (
     <div className="text-center md:text-left">
       <div className="font-display text-4xl font-bold md:text-5xl">
-        <span ref={ref} className="tabular-nums">0</span>
+        <span ref={ref} className="tabular-nums">{value}</span>
         <span className="text-gradient-accent">{suffix}</span>
       </div>
       <p className="mt-1 text-sm text-muted">{label}</p>

@@ -3,9 +3,10 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TESTIMONIALS } from "@/data/content";
 import type { Testimonial } from "@/types";
 
-function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+/** `duplicate` marks the marquee's loop copy so it isn't read twice. */
+function TestimonialCard({ testimonial, duplicate }: { testimonial: Testimonial; duplicate?: boolean }) {
   return (
-    <figure className="glass w-[340px] shrink-0 rounded-3xl p-7 transition-colors duration-300 hover:bg-white/[0.08] md:w-[420px]">
+    <figure aria-hidden={duplicate || undefined} className="glass w-[340px] shrink-0 rounded-3xl p-7 transition-colors duration-300 hover:bg-white/[0.08] md:w-[420px]">
       <Quote size={22} className="text-primary/70" />
       <blockquote className="mt-4 text-sm leading-relaxed text-muted md:text-base">
         "{testimonial.quote}"
@@ -54,7 +55,11 @@ export function Testimonials() {
           <div key={i} className="group flex overflow-hidden">
             <div className={`flex w-max gap-5 pr-5 ${animation} group-hover:[animation-play-state:paused] motion-reduce:animate-none`}>
               {[...row, ...row].map((testimonial, j) => (
-                <TestimonialCard key={`${testimonial.name}-${j}`} testimonial={testimonial} />
+                <TestimonialCard
+                  key={`${testimonial.name}-${j}`}
+                  testimonial={testimonial}
+                  duplicate={j >= row.length}
+                />
               ))}
             </div>
           </div>

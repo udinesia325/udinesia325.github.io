@@ -64,8 +64,8 @@ export const NAV_LINKS: NavLink[] = [
 
 export const SOCIALS: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/udinesia325", icon: GithubIcon },
-  { label: "LinkedIn", href: "https://linkedin.com/in/ahmad-fahruddin-salim", icon: LinkedinIcon },
-  { label: "Instagram", href: "https://instagram.com/dinnn.dev", icon: InstagramIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ahmad-fahruddin-salim", icon: LinkedinIcon },
+  { label: "Instagram", href: "https://www.instagram.com/dinnn.dev", icon: InstagramIcon },
   { label: "Email", href: "mailto:contact@fahruddin.my.id", icon: Mail },
   { label: "WhatsApp", href: "https://wa.me/6283119803061", icon: MessageCircle },
 ];

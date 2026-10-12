@@ -85,7 +85,7 @@ export function Contact() {
                 <a
                   key={label}
                   href={href}
-                  target="_blank"
+                  target={href.startsWith("http") ? "_blank" : undefined}
                   rel="noreferrer noopener"
                   aria-label={label}
                   className="glass flex size-12 items-center justify-center rounded-full text-muted transition-all duration-300 hover:-translate-y-1 hover:text-ink hover:shadow-[0_8px_24px_rgba(124,58,237,0.35)]"

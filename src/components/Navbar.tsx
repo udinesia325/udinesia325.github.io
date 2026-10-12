@@ -132,7 +132,7 @@ export function Navbar() {
             <a
               key={label}
               href={href}
-              target="_blank"
+              target={href.startsWith("http") ? "_blank" : undefined}
               rel="noreferrer noopener"
               aria-label={label}
               className="glass flex size-12 items-center justify-center rounded-full text-muted transition-colors hover:text-ink"

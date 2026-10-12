@@ -8,6 +8,9 @@ export async function render(): Promise<string> {
     <StrictMode>
       <App />
     </StrictMode>,
+    // Never outline big Suspense boundaries into a hidden <div id="S:0"> + $RC script:
+    // non-JS crawlers would read the lazy sections as hidden, out-of-order content.
+    { progressiveChunkSize: Infinity },
   );
   return new Response(prelude).text();
 }
